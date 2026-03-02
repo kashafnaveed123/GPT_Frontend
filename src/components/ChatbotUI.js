@@ -11,17 +11,17 @@ import RightMain from './rightSide/RightMain';
 import profile from '../assests/profile.png'
 
 const COLORS = {
-  primary: "#C026D3",
-  accent: "#EC4899",
-  bg: "#FDF2F8",
+  primary: "#1E40AF",
+  accent: "#2563EB",
+  bg: "#EFF6FF",
   card: "#FFFFFF",
-  subtle: "#9D174D",
+  subtle: "#1E3A8A",
 };
 
 const WELCOME_MESSAGE = {
   id: 'welcome',
   who: "bot",
-  text: "🎀 Hello! I'm Kashaf's GPT — AI assistant to introduce kashaf's tech. How can I support you today?",
+  text: "Hello! I'm Kashaf's GPT — AI assistant to introduce kashaf's tech. How can I support you today?",
   time: new Date().toISOString(),
 };
 
@@ -305,7 +305,7 @@ useEffect(() => {
     <div
       className="min-h-screen flex items-start justify-center p-2 sm:p-4 md:p-6 lg:p-8"
       style={{
-        background: "linear-gradient(135deg, #FCE7F3 0%, #F3E8FF 100%)",
+        background: "#FFFFFF",
       }}
     >
       <div className="w-full max-w-sm sm:max-w-[90%] md:max-w-xl lg:max-w-7xl flex flex-col lg:flex-row gap-4 md:gap-6 sm:gap-2">
@@ -320,18 +320,18 @@ useEffect(() => {
             }}
           >
             {/* Header */}
-            <div className="flex flex-col sm:flex-row items-center justify-between px-4 sm:px-6 py-4 sm:py-5 border-b border-pink-100 gap-3 sm:gap-0">
+            <div className="flex flex-col sm:flex-row items-center justify-between px-4 sm:px-6 py-4 sm:py-5 border-b border-blue-100 gap-3 sm:gap-0">
               <div className="flex items-center gap-3 sm:gap-4">
 
                 <img
                   src={profile}
                   alt="Kashaf Naveed"
-                  className="w-12 h-12 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full object-cover border-4 border-pink-200 shadow-lg"
+                  className="w-12 h-12 sm:w-12 sm:h-12 md:w-16 md:h-16 rounded-full object-cover border-4 border-blue-200 shadow-lg"
                 />
 
                 <div className="text-center sm:text-left">
                   <div className="text-gray-800 text-base sm:text-lg font-semibold">{title}</div>
-                  <div className="text-xs sm:text-sm text-pink-500">{subtitle}</div>
+                  <div className="text-xs sm:text-sm text-blue-500">{subtitle}</div>
                 </div>
               </div>
 
@@ -339,7 +339,7 @@ useEffect(() => {
                 onClick={clearChat}
                 className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg text-sm font-medium text-white shadow-md hover:shadow-lg transition-all"
                 style={{
-                  background: "linear-gradient(135deg, #EC4899, #C026D3)",
+                  background: "linear-gradient(135deg, #2563EB, #1E40AF)",
                 }}
               >
                 <RefreshCw size={16} /> New
@@ -348,10 +348,10 @@ useEffect(() => {
 
             {/* Query Limit Display */}
             {queryLimits && (
-              <div className="px-4 sm:px-6 py-2 bg-pink-50 border-b border-pink-100">
+              <div className="px-4 sm:px-6 py-2 bg-blue-50 border-b border-blue-100">
                 <div className="flex items-center justify-between text-xs sm:text-sm">
                   <div className="flex items-center gap-2">
-                    <Info size={14} className="text-pink-600" />
+                    <Info size={14} className="text-blue-600" />
                     <span className="text-gray-700">
                       {user ? (
                         <span>Queries: <strong>{queryLimits.current}/{queryLimits.limit}</strong></span>
@@ -363,7 +363,7 @@ useEffect(() => {
                   {!user && queryLimits.remaining > 0 && (
                     <button
                       onClick={handleLoginRedirect}
-                      className="text-pink-600 font-semibold hover:text-pink-700 underline"
+                      className="text-blue-600 font-semibold hover:text-blue-700 underline"
                     >
                       Login for 5 queries/day
                     </button>
@@ -392,7 +392,7 @@ useEffect(() => {
                       <p className="mt-1">
                         <button
                           onClick={handleLoginRedirect}
-                          className="text-pink-600 font-semibold hover:underline"
+                          className="text-blue-600 font-semibold hover:underline"
                         >
                           Login
                         </button>
@@ -407,12 +407,12 @@ useEffect(() => {
             {/* Chat Area */}
             <div
               ref={chatContainerRef}
-              className="h-[50vh] sm:h-[55vh] md:h-[60vh] lg:h-[55vh] overflow-y-auto p-3 md:p-6 space-y-3 sm:space-y-4 bg-gradient-to-b from-white to-pink-50/60"
+              className="h-[50vh] sm:h-[55vh] md:h-[60vh] lg:h-[55vh] overflow-y-auto p-3 md:p-6 space-y-3 sm:space-y-4 bg-gradient-to-b from-white to-blue-50/60"
             >
               {isLoadingHistory ? (
                 <div className="flex items-center justify-center h-full">
                   <div className="text-center">
-                    <div className="inline-block animate-spin rounded-full h-8 w-8 border-4 border-pink-500 border-t-transparent mb-2"></div>
+                    <div className="inline-block animate-spin rounded-full h-8 w-8 border-4 border-blue-500 border-t-transparent mb-2"></div>
                     <p className="text-sm text-gray-600">Loading chat history...</p>
                   </div>
                 </div>
@@ -431,7 +431,7 @@ useEffect(() => {
                           <div
                             className="max-w-[85%] sm:max-w-[75%] px-3 sm:px-4 py-2 rounded-xl text-sm sm:text-base font-medium text-white shadow-md"
                             style={{
-                              background: "linear-gradient(135deg, #C026D3, #EC4899)",
+                              background: "linear-gradient(135deg, #1E40AF, #2563EB)",
                             }}
                           >
                             {m.text}
@@ -442,7 +442,7 @@ useEffect(() => {
                           {/* <div
                             className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center text-white font-medium shadow-md flex-shrink-0"
                             style={{
-                              background: "linear-gradient(135deg, #EC4899, #C026D3)",
+                              background: "linear-gradient(135deg, #2563EB, #1E40AF)",
                             }}
                           >
                             K
@@ -450,11 +450,11 @@ useEffect(() => {
                           <img
                             src={profile}
                             alt="Kashaf Naveed"
-                            className="w-14 h-14 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-pink-200 shadow-lg"
+                            className="w-14 h-14 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-blue-200 shadow-lg"
                           />
                           <div className={`max-w-[85%] px-3 sm:px-4 py-2 sm:py-3 rounded-xl text-sm sm:text-base shadow-sm border ${m.isError
                               ? 'bg-red-50 text-red-800 border-red-200'
-                              : 'bg-pink-50 text-gray-800 border-pink-100'
+                              : 'bg-blue-50 text-gray-800 border-blue-100'
                             }`}>
                             <div className="whitespace-pre-wrap leading-relaxed">
                               <ReactMarkdown remarkPlugins={[remarkGfm]}>
@@ -462,13 +462,13 @@ useEffect(() => {
                               </ReactMarkdown>
                             </div>
                             {m.meta && m.meta.length > 0 && (
-                              <div className="mt-2 text-xs text-pink-600 font-medium">
+                              <div className="mt-2 text-xs text-blue-600 font-medium">
                                  Sources: {m.meta.slice(0, 3).join(", ")}
                                 {m.meta.length > 3 ? "..." : ""}
                               </div>
                             )}
                             {m.limitInfo && !m.isError && (
-                              <div className="mt-2 pt-2 border-t border-pink-200 text-xs text-gray-600">
+                              <div className="mt-2 pt-2 border-t border-blue-200 text-xs text-gray-600">
                                 Remaining queries: {m.limitInfo.remaining}/{m.limitInfo.limit}
                               </div>
                             )}
@@ -489,17 +489,17 @@ useEffect(() => {
                   <div
                     className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center text-white font-medium shadow-md flex-shrink-0"
                     style={{
-                      background: "linear-gradient(135deg, #EC4899, #C026D3)",
+                      background: "linear-gradient(135deg, #2563EB, #1E40AF)",
                     }}
                   >
                     K
                   </div>
-                  <div className="max-w-[85%] px-3 sm:px-4 py-2 sm:py-3 rounded-xl text-sm sm:text-base bg-pink-50 text-gray-800 shadow-sm border border-pink-100">
+                  <div className="max-w-[85%] px-3 sm:px-4 py-2 sm:py-3 rounded-xl text-sm sm:text-base bg-blue-50 text-gray-800 shadow-sm border border-blue-100">
                     <div className="flex items-center gap-2">
                       <div className="flex gap-1">
-                        <span className="w-2 h-2 bg-pink-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></span>
-                        <span className="w-2 h-2 bg-pink-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></span>
-                        <span className="w-2 h-2 bg-pink-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></span>
+                        <span className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></span>
+                        <span className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></span>
+                        <span className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></span>
                       </div>
                       <span className="text-gray-600">Thinking...</span>
                     </div>
@@ -510,14 +510,14 @@ useEffect(() => {
             </div>
 
             {/* Input Section */}
-            <div className="px-3 sm:px-4 md:px-6 py-3 sm:py-4 border-t border-pink-100 flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3 bg-white/80 backdrop-blur">
-              <div className="flex items-center gap-2 p-2 rounded-md bg-pink-50 border border-pink-100 flex-1">
+            <div className="px-3 sm:px-4 md:px-6 py-3 sm:py-4 border-t border-blue-100 flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3 bg-white/80 backdrop-blur">
+              <div className="flex items-center gap-2 p-2 rounded-md bg-blue-50 border border-blue-100 flex-1">
                 <button
                   type="button"
-                  className="p-1.5 sm:p-2 text-sm rounded-sm hover:bg-pink-100 transition-all"
+                  className="p-1.5 sm:p-2 text-sm rounded-sm hover:bg-blue-100 transition-all"
                   disabled
                 >
-                  <Paperclip size={16} className="text-pink-400" />
+                  <Paperclip size={16} className="text-blue-400" />
                 </button>
 
                 <input
@@ -535,15 +535,15 @@ useEffect(() => {
                       : "Ask anything about Kashaf..."
                   }
                   disabled={isSending || (queryLimits && !queryLimits.allowed) || isLoadingHistory}
-                  className="bg-transparent outline-none text-gray-700 placeholder:text-pink-400 flex-1 text-sm sm:text-base py-1.5 sm:py-2 disabled:opacity-50"
+                  className="bg-transparent outline-none text-gray-700 placeholder:text-blue-400 flex-1 text-sm sm:text-base py-1.5 sm:py-2 disabled:opacity-50"
                 />
 
                 <button
                   type="button"
-                  className="p-1.5 sm:p-2 rounded-md hover:bg-pink-100 transition-all"
+                  className="p-1.5 sm:p-2 rounded-md hover:bg-blue-100 transition-all"
                   disabled
                 >
-                  <Mic size={16} className="text-pink-400" />
+                  <Mic size={16} className="text-blue-400" />
                 </button>
               </div>
 
@@ -552,7 +552,7 @@ useEffect(() => {
                 disabled={isSending || !input.trim() || (queryLimits && !queryLimits.allowed) || isLoadingHistory}
                 className="flex items-center justify-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold text-white shadow-md hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 style={{
-                  background: "linear-gradient(135deg, #EC4899, #C026D3)",
+                  background: "linear-gradient(135deg, #2563EB, #1E40AF)",
                 }}
               >
                 {isSending ? "Thinking..." : "Send"} <Send size={16} />
@@ -561,11 +561,11 @@ useEffect(() => {
           </div>
 
           {/* Footer */}
-          <div className="mt-2 sm:mt-3 text-center text-xs sm:text-sm text-pink-600 font-medium">
+          <div className="mt-2 sm:mt-3 text-center text-xs sm:text-sm text-blue-600 font-medium">
             {user ? (
               <span>✨ Logged in as {user.name || user.full_name} - 5 queries/day</span>
             ) : (
-              <span>👋 Guest mode - 3 queries/day • <button onClick={handleLoginRedirect} className="underline hover:text-pink-700">Login for more</button></span>
+              <span>👋 Guest mode - 3 queries/day • <button onClick={handleLoginRedirect} className="underline hover:text-blue-700">Login for more</button></span>
             )}
           </div>
         </div>

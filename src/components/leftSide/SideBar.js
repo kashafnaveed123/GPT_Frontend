@@ -5,9 +5,9 @@ import { useAuth } from '../../context/AuthContext';
 import toast from 'react-hot-toast';
 
 const COLORS = {
-  primary: "#C026D3",
-  accent: "#EC4899",
-  bg: "#FDF2F8",
+  primary: "#1E40AF",
+  accent: "#2563EB",
+  bg: "#EFF6FF",
   card: "#FFFFFF",
 };
 
@@ -200,7 +200,7 @@ export default function Sidebar({
 
     return (
       <div className="mb-4" onClick={(e) => e.stopPropagation()}>
-        <h3 className="text-xs font-semibold text-pink-400 uppercase tracking-wide px-4 mb-2">
+        <h3 className="text-xs font-semibold text-blue-400 uppercase tracking-wide px-4 mb-2">
           {title}
         </h3>
         <div className="space-y-1">
@@ -210,8 +210,8 @@ export default function Sidebar({
               className={`
                 relative group mx-2 rounded-lg transition-all cursor-pointer
                 ${currentChatId === chat.id 
-                  ? 'bg-gradient-to-r from-pink-500 to-fuchsia-600 text-white' 
-                  : 'hover:bg-pink-50 text-gray-700'
+                  ? 'bg-gradient-to-r from-blue-600 to-indigo-700 text-white' 
+                  : 'hover:bg-blue-50 text-gray-700'
                 }
               `}
               onClick={() => {
@@ -225,9 +225,9 @@ export default function Sidebar({
               <div className="flex items-center gap-3 px-4 py-3">
                 <div className="flex items-center gap-2 flex-shrink-0">
                   {chat.is_pinned && (
-                    <Pin size={12} className={currentChatId === chat.id ? 'text-white' : 'text-pink-500'} />
+                    <Pin size={12} className={currentChatId === chat.id ? 'text-white' : 'text-blue-500'} />
                   )}
-                  <MessageSquare size={16} className={currentChatId === chat.id ? 'text-white' : 'text-pink-500'} />
+                  <MessageSquare size={16} className={currentChatId === chat.id ? 'text-white' : 'text-blue-500'} />
                 </div>
                 
                 <div className="flex-1 min-w-0">
@@ -243,12 +243,12 @@ export default function Sidebar({
                             handleFinishRename(chat.id, e);
                           }
                         }}
-                        className="flex-1 px-2 py-1 text-sm border border-pink-300 rounded focus:outline-none focus:border-pink-500 text-gray-800"
+                        className="flex-1 px-2 py-1 text-sm border border-blue-300 rounded focus:outline-none focus:border-blue-500 text-gray-800"
                         autoFocus
                       />
                       <button
                         onClick={(e) => handleFinishRename(chat.id, e)}
-                        className="p-1 rounded bg-pink-500 text-white hover:bg-pink-600 transition-colors flex-shrink-0"
+                        className="p-1 rounded bg-blue-500 text-white hover:bg-blue-600 transition-colors flex-shrink-0"
                         title="Save"
                       >
                         <Check size={14} />
@@ -259,7 +259,7 @@ export default function Sidebar({
                       <p className="text-sm font-medium truncate">
                         {chat.title || 'Untitled Chat'}
                       </p>
-                      <p className={`text-xs truncate ${currentChatId === chat.id ? 'text-pink-100' : 'text-gray-500'}`}>
+                      <p className={`text-xs truncate ${currentChatId === chat.id ? 'text-blue-100' : 'text-gray-500'}`}>
                         {chat.preview || 'No messages yet'}
                       </p>
                     </>
@@ -270,8 +270,8 @@ export default function Sidebar({
                   <div className="flex items-center gap-1 flex-shrink-0">
                     <button
                       onClick={(e) => handleStartRename(chat, e)}
-                      className={`p-1 rounded hover:bg-pink-200 transition-colors ${
-                        currentChatId === chat.id ? 'text-white hover:bg-pink-400' : 'text-pink-600'
+                      className={`p-1 rounded hover:bg-blue-200 transition-colors ${
+                        currentChatId === chat.id ? 'text-white hover:bg-blue-400' : 'text-blue-600'
                       }`}
                       title="Rename"
                     >
@@ -283,8 +283,8 @@ export default function Sidebar({
                     
                     <button
                       onClick={(e) => handlePin(chat.id, !chat.is_pinned, e)}
-                      className={`p-1 rounded hover:bg-pink-200 transition-colors ${
-                        currentChatId === chat.id ? 'text-white hover:bg-pink-400' : 'text-pink-600'
+                      className={`p-1 rounded hover:bg-blue-200 transition-colors ${
+                        currentChatId === chat.id ? 'text-white hover:bg-blue-400' : 'text-blue-600'
                       }`}
                       title={chat.is_pinned ? "Unpin" : "Pin"}
                     >
@@ -293,8 +293,8 @@ export default function Sidebar({
 
                     <button
                       onClick={(e) => handleDelete(chat.id, e)}
-                      className={`p-1 rounded hover:bg-pink-200 transition-colors ${
-                        currentChatId === chat.id ? 'text-white hover:bg-pink-400' : 'text-pink-600'
+                      className={`p-1 rounded hover:bg-blue-200 transition-colors ${
+                        currentChatId === chat.id ? 'text-white hover:bg-blue-400' : 'text-blue-600'
                       }`}
                       title="Delete"
                     >
@@ -317,22 +317,22 @@ export default function Sidebar({
         {/* Small screen - Only Menu Button */}
         <div className="md:hidden fixed top-4 left-4 z-50">
           <button 
-            className="p-2 rounded-lg bg-white shadow-lg hover:bg-pink-50 transition-all border border-pink-100"
+            className="p-2 rounded-lg bg-white shadow-lg hover:bg-blue-50 transition-all border border-blue-100"
             onClick={onMenuClick}
           >
-            <Menu size={20} className="text-pink-600" />
+            <Menu size={20} className="text-blue-600" />
           </button>
         </div>
 
         {/* Medium and Large screens - Full collapsed sidebar */}
-        <div className="hidden md:block fixed lg:sticky top-0 left-0 h-screen z-50 bg-white shadow-2xl border-r border-pink-100 md:w-16 lg:w-20">
+        <div className="hidden md:block fixed lg:sticky top-0 left-0 h-screen z-50 bg-white shadow-2xl border-r border-blue-100 md:w-16 lg:w-20">
           <div className="h-full flex flex-col items-center py-5 lg:py-6 gap-5 lg:gap-6">
             <Tooltip text='Expand'>
               <button 
-                className="p-2 rounded-lg hover:bg-pink-100 transition-all"
+                className="p-2 rounded-lg hover:bg-blue-100 transition-all"
                 onClick={onMenuClick}
               >
-                <Menu size={20} className="text-pink-600" />
+                <Menu size={20} className="text-blue-600" />
               </button>
             </Tooltip>
             
@@ -340,7 +340,7 @@ export default function Sidebar({
               <div
                 className="w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center text-white font-bold shadow-md cursor-pointer hover:scale-110 transition-transform text-sm lg:text-base"
                 style={{
-                  background: "linear-gradient(135deg, #EC4899, #C026D3)",
+                  background: "linear-gradient(135deg, #2563EB, #1E40AF)",
                 }}
                 onClick={onToggle}
               >
@@ -351,7 +351,7 @@ export default function Sidebar({
             <Tooltip text="New Chat">
               <button
                 onClick={onNewChat}
-                className="w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center border-2 border-pink-500 text-pink-500 hover:bg-pink-50 hover:scale-110 transition-all shadow-md"
+                className="w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center border-2 border-blue-500 text-blue-500 hover:bg-blue-50 hover:scale-110 transition-all shadow-md"
               >
                 <Plus size={22} className="lg:w-6 lg:h-6" />
               </button>
@@ -365,7 +365,7 @@ export default function Sidebar({
                 disabled={isLoggingOut}
                 className="w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center text-white shadow-md hover:scale-110 transition-transform disabled:opacity-50 disabled:cursor-not-allowed"
                 style={{
-                  background: "linear-gradient(135deg, #EC4899, #C026D3)",
+                  background: "linear-gradient(135deg, #2563EB, #1E40AF)",
                 }}
               >
                 {isLoggingOut ? (
@@ -416,29 +416,29 @@ export default function Sidebar({
         }`}
         style={{ width: '280px' }}
       >
-        <div className="h-screen flex flex-col bg-white shadow-2xl border-r border-pink-100">
+        <div className="h-screen flex flex-col bg-white shadow-2xl border-r border-blue-100">
           {/* Header */}
-          <div className="p-4 border-b border-pink-100">
+          <div className="p-4 border-b border-blue-100">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-3">
                 <div
                   className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold shadow-md"
                   style={{
-                    background: "linear-gradient(135deg, #EC4899, #C026D3)",
+                    background: "linear-gradient(135deg, #2563EB, #1E40AF)",
                   }}
                 >
                   {displayName.charAt(0).toUpperCase()}
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-gray-800">{displayName}</p>
-                  <p className="text-xs text-pink-500">
+                  <p className="text-xs text-blue-500">
                     {user ? 'Online' : 'Guest Mode'}
                   </p>
                 </div>
               </div>
               <button
                 onClick={onToggle}
-                className="p-2 hover:bg-pink-50 rounded-lg transition-colors"
+                className="p-2 hover:bg-blue-50 rounded-lg transition-colors"
               >
                 <X size={20} className="text-gray-600" />
               </button>
@@ -449,8 +449,8 @@ export default function Sidebar({
               onClick={onNewChat}
               className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-md text-sm font-semibold hover:shadow-lg transition-all"
               style={{
-                color: '#ec4899',
-                border:'2px solid #ec4899'
+                color: '#2563eb',
+                border:'2px solid #2563eb'
               }}
             >
               <Plus size={18} />
@@ -462,7 +462,7 @@ export default function Sidebar({
           <div className="flex-1 overflow-y-auto py-4">
             {Object.keys(groups).length === 0 || Object.values(groups).every(arr => arr.length === 0) ? (
               <div className="px-4 py-8 text-center">
-                <MessageSquare size={48} className="mx-auto text-pink-200 mb-3" />
+                <MessageSquare size={48} className="mx-auto text-blue-200 mb-3" />
                 <p className="text-sm text-gray-500">No chat history yet</p>
                 <p className="text-xs text-gray-400 mt-1">Start a new conversation</p>
               </div>
@@ -476,14 +476,14 @@ export default function Sidebar({
           </div>
 
           {/* Footer */}
-          <div className="p-4 border-t border-pink-100">
+          <div className="p-4 border-t border-blue-100">
             {user ? (
               <button
                 onClick={handleLogout}
                 disabled={isLoggingOut}
                 className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-sm font-semibold text-white shadow-md hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 style={{
-                  background: "linear-gradient(135deg, #EC4899, #C026D3)",
+                  background: "linear-gradient(135deg, #2563EB, #1E40AF)",
                 }}
               >
                 {isLoggingOut ? (
@@ -518,7 +518,7 @@ export default function Sidebar({
                 onClick={() => navigate('/login')}
                 className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-sm font-semibold text-white shadow-md hover:shadow-lg transition-all"
                 style={{
-                  background: "linear-gradient(135deg, #EC4899, #C026D3)",
+                  background: "linear-gradient(135deg, #2563EB, #1E40AF)",
                 }}
               >
                 <LogOut size={18} />

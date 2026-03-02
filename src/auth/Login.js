@@ -86,19 +86,19 @@ export default function Login({ onSwitchToSignup }) {
         animate={{ opacity: 1, y: 0 }}
         className="w-full max-w-md"
       >
-        <div className="bg-white rounded-3xl shadow-2xl p-8 border border-pink-100">
+        <div className="bg-white rounded-3xl shadow-2xl p-8 border border-blue-100">
           
           <div className="text-center mb-8">
             <div
               className="w-20 h-20 mx-auto rounded-2xl flex items-center justify-center text-white font-bold text-3xl shadow-lg mb-4"
               style={{
-                background: "linear-gradient(135deg, #EC4899, #C026D3)",
+                background: "linear-gradient(135deg, #2563EB, #1E40AF)",
               }}
             >
               K
             </div>
             <h1 className="text-3xl font-bold text-gray-800 mb-2">Welcome Back</h1>
-            <p className="text-pink-600">Sign in to continue to Kashaf's AI Assistant</p>
+            <p className="text-blue-600">Sign in to continue to Kashaf's AI Assistant</p>
           </div>
 
           {/* Formik Wrapper */}
@@ -117,7 +117,7 @@ export default function Login({ onSwitchToSignup }) {
                       Email Address
                     </label>
                     <div className="relative">
-                      <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-pink-400" size={20} />
+                      <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-blue-400" size={20} />
                       <input
                         type="email"
                         name="email"
@@ -125,7 +125,7 @@ export default function Login({ onSwitchToSignup }) {
                         onChange={handleChange}
                         onBlur={handleBlur}
                         disabled={isLoading}
-                        className="w-full pl-12 pr-4 py-3 border-2 border-pink-100 rounded-xl focus:border-pink-400 focus:outline-none transition-all disabled:opacity-50"
+                        className="w-full pl-12 pr-4 py-3 border-2 border-blue-100 rounded-xl focus:border-blue-400 focus:outline-none transition-all disabled:opacity-50"
                         placeholder="you@example.com"
                         autoComplete="email"
                       />
@@ -141,7 +141,7 @@ export default function Login({ onSwitchToSignup }) {
                       Password
                     </label>
                     <div className="relative">
-                      <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-pink-400" size={20} />
+                      <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-blue-400" size={20} />
                       <input
                         type={showPassword ? "text" : "password"}
                         name="password"
@@ -149,7 +149,7 @@ export default function Login({ onSwitchToSignup }) {
                         onChange={handleChange}
                         onBlur={handleBlur}
                         disabled={isLoading}
-                        className="w-full pl-12 pr-12 py-3 border-2 border-pink-100 rounded-xl focus:border-pink-400 focus:outline-none transition-all disabled:opacity-50"
+                        className="w-full pl-12 pr-12 py-3 border-2 border-blue-100 rounded-xl focus:border-blue-400 focus:outline-none transition-all disabled:opacity-50"
                         placeholder="••••••••"
                         autoComplete="current-password"
                       />
@@ -157,7 +157,7 @@ export default function Login({ onSwitchToSignup }) {
                         type="button"
                         onClick={() => setShowPassword(!showPassword)}
                         disabled={isLoading}
-                        className="absolute right-4 top-1/2 -translate-y-1/2 text-pink-400 hover:text-pink-600"
+                        className="absolute right-4 top-1/2 -translate-y-1/2 text-blue-400 hover:text-blue-600"
                       >
                         {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
                       </button>
@@ -198,7 +198,7 @@ export default function Login({ onSwitchToSignup }) {
                     disabled={isLoading}
                     className="w-full py-3 rounded-xl text-white font-semibold shadow-lg hover:shadow-xl transition-all disabled:opacity-50"
                     style={{
-                      background: "linear-gradient(135deg, #EC4899, #C026D3)",
+                      background: "linear-gradient(135deg, #2563EB, #1E40AF)",
                     }}
                   >
                     {isLoading ? "Signing In..." : "Sign In"}
@@ -209,7 +209,7 @@ export default function Login({ onSwitchToSignup }) {
                     <button
                       type="button"
                       disabled={isLoading}
-                      className="text-sm text-pink-600 font-medium disabled:opacity-50"
+                      className="text-sm text-blue-600 font-medium disabled:opacity-50"
                     >
                       Forgot Password?
                     </button>
@@ -224,7 +224,7 @@ export default function Login({ onSwitchToSignup }) {
                       onClick={() => navigate("/signup")}
                       type="button"
                       disabled={isLoading}
-                      className="text-pink-600 font-semibold hover:text-pink-700"
+                      className="text-blue-600 font-semibold hover:text-blue-700"
                     >
                       Sign Up
                     </button>
@@ -239,7 +239,7 @@ export default function Login({ onSwitchToSignup }) {
                       onClick={handleGuestMode}
                       type="button"
                       disabled={isLoading}
-                      className="text-pink-600 font-semibold hover:text-pink-700"
+                      className="text-blue-600 font-semibold hover:text-blue-700"
                     >
                       Click here
                     </button>

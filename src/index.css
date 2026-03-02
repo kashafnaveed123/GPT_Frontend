@@ -31,12 +31,12 @@ code {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #EC4899;
+  background: #2563EB;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #C026D3;
+  background: #1E40AF;
 }
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-4px); }

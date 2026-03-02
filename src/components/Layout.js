@@ -445,12 +445,12 @@ export default function Layout() {
           },
           success: {
             style: {
-              background: '#FDF2F8',
-              color: '#C026D3',
-              border: '1px solid #EC4899',
+              background: '#EFF6FF',
+              color: '#1E40AF',
+              border: '1px solid #2563EB',
             },
             iconTheme: {
-              primary: '#EC4899',
+              primary: '#2563EB',
               secondary: '#fff',
             },
           },

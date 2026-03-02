@@ -64,19 +64,19 @@
 //         animate={{ opacity: 1, y: 0 }}
 //         className="w-full max-w-md"
 //       >
-//         <div className="bg-white rounded-3xl shadow-2xl p-8 border border-pink-100">
+//         <div className="bg-white rounded-3xl shadow-2xl p-8 border border-blue-100">
 //           {/* Logo & Header */}
 //           <div className="text-center mb-8">
 //             <div
 //               className="w-20 h-20 mx-auto rounded-2xl flex items-center justify-center text-white font-bold text-3xl shadow-lg mb-4"
 //               style={{
-//                 background: "linear-gradient(135deg, #EC4899, #C026D3)",
+//                 background: "linear-gradient(135deg, #2563EB, #1E40AF)",
 //               }}
 //             >
 //               K
 //             </div>
 //             <h1 className="text-3xl font-bold text-gray-800 mb-2">Create Account</h1>
-//             <p className="text-pink-600">Join Kashaf's AI Assistant today</p>
+//             <p className="text-blue-600">Join Kashaf's AI Assistant today</p>
 //           </div>
 
 //           {/* Form */}
@@ -86,13 +86,13 @@
 //                 Full Name
 //               </label>
 //               <div className="relative">
-//                 <User className="absolute left-4 top-1/2 -translate-y-1/2 text-pink-400" size={20} />
+//                 <User className="absolute left-4 top-1/2 -translate-y-1/2 text-blue-400" size={20} />
 //                 <input
 //                   type="text"
 //                   value={name}
 //                   onChange={(e) => setName(e.target.value)}
 //                   onKeyPress={handleKeyPress}
-//                   className="w-full pl-12 pr-4 py-3 border-2 border-pink-100 rounded-xl focus:border-pink-400 focus:outline-none transition-all"
+//                   className="w-full pl-12 pr-4 py-3 border-2 border-blue-100 rounded-xl focus:border-blue-400 focus:outline-none transition-all"
 //                   placeholder="John Doe"
 //                 />
 //               </div>
@@ -103,13 +103,13 @@
 //                 Email Address
 //               </label>
 //               <div className="relative">
-//                 <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-pink-400" size={20} />
+//                 <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-blue-400" size={20} />
 //                 <input
 //                   type="email"
 //                   value={email}
 //                   onChange={(e) => setEmail(e.target.value)}
 //                   onKeyPress={handleKeyPress}
-//                   className="w-full pl-12 pr-4 py-3 border-2 border-pink-100 rounded-xl focus:border-pink-400 focus:outline-none transition-all"
+//                   className="w-full pl-12 pr-4 py-3 border-2 border-blue-100 rounded-xl focus:border-blue-400 focus:outline-none transition-all"
 //                   placeholder="you@example.com"
 //                 />
 //               </div>
@@ -120,19 +120,19 @@
 //                 Password
 //               </label>
 //               <div className="relative">
-//                 <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-pink-400" size={20} />
+//                 <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-blue-400" size={20} />
 //                 <input
 //                   type={showPassword ? "text" : "password"}
 //                   value={password}
 //                   onChange={(e) => setPassword(e.target.value)}
 //                   onKeyPress={handleKeyPress}
-//                   className="w-full pl-12 pr-12 py-3 border-2 border-pink-100 rounded-xl focus:border-pink-400 focus:outline-none transition-all"
+//                   className="w-full pl-12 pr-12 py-3 border-2 border-blue-100 rounded-xl focus:border-blue-400 focus:outline-none transition-all"
 //                   placeholder="••••••••"
 //                 />
 //                 <button
 //                   type="button"
 //                   onClick={() => setShowPassword(!showPassword)}
-//                   className="absolute right-4 top-1/2 -translate-y-1/2 text-pink-400 hover:text-pink-600"
+//                   className="absolute right-4 top-1/2 -translate-y-1/2 text-blue-400 hover:text-blue-600"
 //                 >
 //                   {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
 //                 </button>
@@ -144,13 +144,13 @@
 //                 Confirm Password
 //               </label>
 //               <div className="relative">
-//                 <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-pink-400" size={20} />
+//                 <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-blue-400" size={20} />
 //                 <input
 //                   type={showPassword ? "text" : "password"}
 //                   value={confirmPassword}
 //                   onChange={(e) => setConfirmPassword(e.target.value)}
 //                   onKeyPress={handleKeyPress}
-//                   className="w-full pl-12 pr-4 py-3 border-2 border-pink-100 rounded-xl focus:border-pink-400 focus:outline-none transition-all"
+//                   className="w-full pl-12 pr-4 py-3 border-2 border-blue-100 rounded-xl focus:border-blue-400 focus:outline-none transition-all"
 //                   placeholder="••••••••"
 //                 />
 //               </div>
@@ -167,7 +167,7 @@
 //               disabled={isLoading}
 //               className="w-full py-3 rounded-xl text-white font-semibold shadow-lg hover:shadow-xl transition-all disabled:opacity-50"
 //               style={{
-//                 background: "linear-gradient(135deg, #EC4899, #C026D3)",
+//                 background: "linear-gradient(135deg, #2563EB, #1E40AF)",
 //               }}
 //             >
 //               {isLoading ? "Creating Account..." : "Sign Up"}
@@ -180,7 +180,7 @@
 //               Already have an account?{" "}
 //               <button
 //                 onClick={onSwitchToLogin}
-//                 className="text-pink-600 font-semibold hover:text-pink-700"
+//                 className="text-blue-600 font-semibold hover:text-blue-700"
 //               >
 //                 Sign In
 //               </button>
@@ -193,7 +193,7 @@
 //               Continue as a guest?{" "}
 //               <button
 //                 onClick={()=>navigate('/')}
-//                 className="text-pink-600 font-semibold hover:text-pink-700"
+//                 className="text-blue-600 font-semibold hover:text-blue-700"
 //               >
 //                 Click here
 //               </button>
@@ -321,19 +321,19 @@
 //         animate={{ opacity: 1, y: 0 }}
 //         className="w-full max-w-md"
 //       >
-//         <div className="bg-white rounded-3xl shadow-2xl p-8 border border-pink-100">
+//         <div className="bg-white rounded-3xl shadow-2xl p-8 border border-blue-100">
 //           {/* Logo & Header */}
 //           <div className="text-center mb-8">
 //             <div
 //               className="w-20 h-20 mx-auto rounded-2xl flex items-center justify-center text-white font-bold text-3xl shadow-lg mb-4"
 //               style={{
-//                 background: "linear-gradient(135deg, #EC4899, #C026D3)",
+//                 background: "linear-gradient(135deg, #2563EB, #1E40AF)",
 //               }}
 //             >
 //               K
 //             </div>
 //             <h1 className="text-3xl font-bold text-gray-800 mb-2">Create Account</h1>
-//             <p className="text-pink-600">Join Kashaf's AI Assistant today</p>
+//             <p className="text-blue-600">Join Kashaf's AI Assistant today</p>
 //           </div>
 
 //           {/* Form */}
@@ -343,14 +343,14 @@
 //                 Full Name
 //               </label>
 //               <div className="relative">
-//                 <User className="absolute left-4 top-1/2 -translate-y-1/2 text-pink-400" size={20} />
+//                 <User className="absolute left-4 top-1/2 -translate-y-1/2 text-blue-400" size={20} />
 //                 <input
 //                   type="text"
 //                   value={name}
 //                   onChange={(e) => setName(e.target.value)}
 //                   onKeyPress={handleKeyPress}
 //                   disabled={isLoading}
-//                   className="w-full pl-12 pr-4 py-3 border-2 border-pink-100 rounded-xl focus:border-pink-400 focus:outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+//                   className="w-full pl-12 pr-4 py-3 border-2 border-blue-100 rounded-xl focus:border-blue-400 focus:outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
 //                   placeholder="John Doe"
 //                 />
 //               </div>
@@ -361,14 +361,14 @@
 //                 Email Address
 //               </label>
 //               <div className="relative">
-//                 <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-pink-400" size={20} />
+//                 <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-blue-400" size={20} />
 //                 <input
 //                   type="email"
 //                   value={email}
 //                   onChange={(e) => setEmail(e.target.value)}
 //                   onKeyPress={handleKeyPress}
 //                   disabled={isLoading}
-//                   className="w-full pl-12 pr-4 py-3 border-2 border-pink-100 rounded-xl focus:border-pink-400 focus:outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+//                   className="w-full pl-12 pr-4 py-3 border-2 border-blue-100 rounded-xl focus:border-blue-400 focus:outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
 //                   placeholder="you@example.com"
 //                 />
 //               </div>
@@ -379,21 +379,21 @@
 //                 Password
 //               </label>
 //               <div className="relative">
-//                 <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-pink-400" size={20} />
+//                 <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-blue-400" size={20} />
 //                 <input
 //                   type={showPassword ? "text" : "password"}
 //                   value={password}
 //                   onChange={(e) => setPassword(e.target.value)}
 //                   onKeyPress={handleKeyPress}
 //                   disabled={isLoading}
-//                   className="w-full pl-12 pr-12 py-3 border-2 border-pink-100 rounded-xl focus:border-pink-400 focus:outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+//                   className="w-full pl-12 pr-12 py-3 border-2 border-blue-100 rounded-xl focus:border-blue-400 focus:outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
 //                   placeholder="••••••••"
 //                 />
 //                 <button
 //                   type="button"
 //                   onClick={() => setShowPassword(!showPassword)}
 //                   disabled={isLoading}
-//                   className="absolute right-4 top-1/2 -translate-y-1/2 text-pink-400 hover:text-pink-600 disabled:opacity-50"
+//                   className="absolute right-4 top-1/2 -translate-y-1/2 text-blue-400 hover:text-blue-600 disabled:opacity-50"
 //                 >
 //                   {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
 //                 </button>
@@ -405,22 +405,22 @@
 //                 Confirm Password
 //               </label>
 //               <div className="relative">
-//                 <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-pink-400" size={20} />
+//                 <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-blue-400" size={20} />
 //                 <input
 //                   type={showPassword ? "text" : "password"}
 //                   value={confirmPassword}
 //                   onChange={(e) => setConfirmPassword(e.target.value)}
 //                   onKeyPress={handleKeyPress}
 //                   disabled={isLoading}
-//                   className="w-full pl-12 pr-4 py-3 border-2 border-pink-100 rounded-xl focus:border-pink-400 focus:outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+//                   className="w-full pl-12 pr-4 py-3 border-2 border-blue-100 rounded-xl focus:border-blue-400 focus:outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
 //                   placeholder="••••••••"
 //                 />
 //               </div>
 //             </div>
 
 //             {/* Password Requirements */}
-//             <div className="bg-pink-50 border border-pink-200 rounded-xl p-3 text-xs text-gray-600">
-//               <p className="font-semibold text-pink-600 mb-1">Password must contain:</p>
+//             <div className="bg-blue-50 border border-blue-200 rounded-xl p-3 text-xs text-gray-600">
+//               <p className="font-semibold text-blue-600 mb-1">Password must contain:</p>
 //               <ul className="space-y-1">
 //                 <li className={password.length >= 6 ? "text-green-600" : ""}>
 //                   • At least 6 characters
@@ -458,7 +458,7 @@
 //               disabled={isLoading}
 //               className="w-full py-3 rounded-xl text-white font-semibold shadow-lg hover:shadow-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden"
 //               style={{
-//                 background: "linear-gradient(135deg, #EC4899, #C026D3)",
+//                 background: "linear-gradient(135deg, #2563EB, #1E40AF)",
 //               }}
 //             >
 //               {isLoading ? (
@@ -494,7 +494,7 @@
 //               <button
 //                 onClick={onSwitchToLogin}
 //                 disabled={isLoading}
-//                 className="text-pink-600 font-semibold hover:text-pink-700 disabled:opacity-50"
+//                 className="text-blue-600 font-semibold hover:text-blue-700 disabled:opacity-50"
 //               >
 //                 Sign In
 //               </button>
@@ -508,7 +508,7 @@
 //               <button
 //                 onClick={() => navigate('/')}
 //                 disabled={isLoading}
-//                 className="text-pink-600 font-semibold hover:text-pink-700 disabled:opacity-50"
+//                 className="text-blue-600 font-semibold hover:text-blue-700 disabled:opacity-50"
 //               >
 //                 Click here
 //               </button>
@@ -616,18 +616,18 @@ export default function Signup({ onSwitchToLogin }) {
         animate={{ opacity: 1, y: 0 }}
         className="w-full max-w-md"
       >
-        <div className="bg-white rounded-3xl shadow-2xl p-8 border border-pink-100">
+        <div className="bg-white rounded-3xl shadow-2xl p-8 border border-blue-100">
 
           {/* Header */}
           <div className="text-center mb-8">
             <div
               className="w-20 h-20 mx-auto rounded-2xl flex items-center justify-center text-white font-bold text-3xl shadow-lg mb-4"
-              style={{ background: "linear-gradient(135deg, #EC4899, #C026D3)" }}
+              style={{ background: "linear-gradient(135deg, #2563EB, #1E40AF)" }}
             >
               K
             </div>
             <h1 className="text-3xl font-bold text-gray-800 mb-2">Create Account</h1>
-            <p className="text-pink-600">Join Kashaf's AI Assistant today</p>
+            <p className="text-blue-600">Join Kashaf's AI Assistant today</p>
           </div>
 
           {/* Formik */}
@@ -650,7 +650,7 @@ export default function Signup({ onSwitchToLogin }) {
                     Full Name
                   </label>
                   <div className="relative">
-                    <User className="absolute left-4 top-1/2 -translate-y-1/2 text-pink-400" size={20} />
+                    <User className="absolute left-4 top-1/2 -translate-y-1/2 text-blue-400" size={20} />
                     <input
                       type="text"
                       name="name"
@@ -658,7 +658,7 @@ export default function Signup({ onSwitchToLogin }) {
                       value={formik.values.name}
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      className="w-full pl-12 pr-4 py-3 border-2 border-pink-100 rounded-xl focus:border-pink-400 transition-all disabled:opacity-50"
+                      className="w-full pl-12 pr-4 py-3 border-2 border-blue-100 rounded-xl focus:border-blue-400 transition-all disabled:opacity-50"
                       placeholder="Username"
                     />
                   </div>
@@ -673,7 +673,7 @@ export default function Signup({ onSwitchToLogin }) {
                     Email Address
                   </label>
                   <div className="relative">
-                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-pink-400" size={20} />
+                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-blue-400" size={20} />
                     <input
                       type="email"
                       name="email"
@@ -681,7 +681,7 @@ export default function Signup({ onSwitchToLogin }) {
                       value={formik.values.email}
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      className="w-full pl-12 pr-4 py-3 border-2 border-pink-100 rounded-xl focus:border-pink-400 transition-all"
+                      className="w-full pl-12 pr-4 py-3 border-2 border-blue-100 rounded-xl focus:border-blue-400 transition-all"
                       placeholder="you@example.com"
                     />
                   </div>
@@ -696,7 +696,7 @@ export default function Signup({ onSwitchToLogin }) {
                     Password
                   </label>
                   <div className="relative">
-                    <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-pink-400" size={20} />
+                    <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-blue-400" size={20} />
                     <input
                       type={showPassword ? "text" : "password"}
                       name="password"
@@ -704,7 +704,7 @@ export default function Signup({ onSwitchToLogin }) {
                       value={formik.values.password}
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      className="w-full pl-12 pr-12 py-3 border-2 border-pink-100 rounded-xl focus:border-pink-400 transition-all"
+                      className="w-full pl-12 pr-12 py-3 border-2 border-blue-100 rounded-xl focus:border-blue-400 transition-all"
                       placeholder="••••••••"
                     />
 
@@ -712,7 +712,7 @@ export default function Signup({ onSwitchToLogin }) {
                       type="button"
                       disabled={isLoading}
                       onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-4 top-1/2 -translate-y-1/2 text-pink-400 hover:text-pink-600"
+                      className="absolute right-4 top-1/2 -translate-y-1/2 text-blue-400 hover:text-blue-600"
                     >
                       {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
                     </button>
@@ -728,7 +728,7 @@ export default function Signup({ onSwitchToLogin }) {
                     Confirm Password
                   </label>
                   <div className="relative">
-                    <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-pink-400" size={20} />
+                    <Lock className="absolute left-4 top-1/2 -translate-y-1/2 text-blue-400" size={20} />
                     <input
                       type={showPassword ? "text" : "password"}
                       name="confirmPassword"
@@ -736,7 +736,7 @@ export default function Signup({ onSwitchToLogin }) {
                       value={formik.values.confirmPassword}
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      className="w-full pl-12 pr-4 py-3 border-2 border-pink-100 rounded-xl focus:border-pink-400 transition-all"
+                      className="w-full pl-12 pr-4 py-3 border-2 border-blue-100 rounded-xl focus:border-blue-400 transition-all"
                       placeholder="••••••••"
                     />
                   </div>
@@ -746,8 +746,8 @@ export default function Signup({ onSwitchToLogin }) {
                 </div>
 
                 {/* Password Requirements */}
-                <div className="bg-pink-50 border border-pink-200 rounded-xl p-3 text-xs text-gray-600">
-                  <p className="font-semibold text-pink-600 mb-1">Password must contain:</p>
+                <div className="bg-blue-50 border border-blue-200 rounded-xl p-3 text-xs text-gray-600">
+                  <p className="font-semibold text-blue-600 mb-1">Password must contain:</p>
                   <ul className="space-y-1">
                     <li className={formik.values.password.length >= 6 ? "text-green-600" : ""}>
                       • At least 6 characters
@@ -784,7 +784,7 @@ export default function Signup({ onSwitchToLogin }) {
                   onClick={formik.handleSubmit}
                   disabled={isLoading}
                   className="w-full py-3 rounded-xl text-white font-semibold shadow-lg hover:shadow-xl transition-all disabled:opacity-50"
-                  style={{ background: "linear-gradient(135deg, #EC4899, #C026D3)" }}
+                  style={{ background: "linear-gradient(135deg, #2563EB, #1E40AF)" }}
                 >
                   {isLoading ? (
                     <span className="flex items-center justify-center gap-2">
@@ -811,7 +811,7 @@ export default function Signup({ onSwitchToLogin }) {
               <button
                 onClick={()=>navigate('/login')}
                 disabled={isLoading}
-                className="text-pink-600 font-semibold hover:text-pink-700"
+                className="text-blue-600 font-semibold hover:text-blue-700"
               >
                 Sign In
               </button>
@@ -825,7 +825,7 @@ export default function Signup({ onSwitchToLogin }) {
               <button
                 onClick={() => navigate('/')}
                 disabled={isLoading}
-                className="text-pink-600 font-semibold hover:text-pink-700"
+                className="text-blue-600 font-semibold hover:text-blue-700"
               >
                 Click here
               </button>
